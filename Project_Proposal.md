@@ -48,6 +48,7 @@ There are many organizations taking actions in improving this situation, includi
 
 ## The Dataset
 > Health Indicators (Health Inequality Monitor Data Repository) https://www.who.int/data/inequality-monitor/data
+
 Here is the health indicator data set, where includes **13 categories of indicators**, including COVID-19 Trends and Impact Survey (CTIS) indicators, Reproductive, maternal, newborn and child health (RMNCH) indicators, Childhood immunization indicators, Subnational DTP immunization dropout rates using administrative data, HIV indicators, Tuberculosis indicators, Malaria indicators, Water, sanitation and hygiene (WASH) indicators, Indonesia health indicators, Brazil health indicators by municipality, and WHO Thirteenth General Programme of Work (GPW 13) indicators. All the indicators combined together can give us a quite comprehensive picture of each country’s medicare capability and potential problems they were facing from the perspective of health. We can compare each countries’ situation in the case of each indicator to summarize the inequality, which is the center of our project. 
 -  _* Sorry we cannot have a table that presents the name of each data file, the number of observations (rows), and the number of variables (columns) because there are too many tables in the dataset to conclude, and we did not decide to use which indicators for our research right now. I have encludied all the indicators above._
 
