@@ -79,7 +79,8 @@ This data set is collected by the WHO (world health organization) in June 2022. 
 ## References
 - Cummins, M., & Ortiz, I. (2022). (publication). _End Austerity: A Global Report on Budget Cuts and Harmful Social Reforms in 2022-25_ (pp. 1–112). Initiative for Policy Dialogue (IPD).
 - Hickel, J. (2017, January 14). _Aid in reverse: How poor countries develop Rich Countries._ The Guardian. Retrieved October 31, 2022, from https://www.theguardian.com/global-development-professionals-network/2017/jan/14/aid-in-reverse-how-poor-countries-develop-rich-countries 
-- Rabin, R. C. (2021, August 17). _Racial inequities persist in health care despite expanded insurance._ The New York Times. Retrieved October 31, 2022, from https://www.nytimes.com/2021/08/17/health/racial-disparities-health-care.html 
+- Rabin, R. C. (2021, August 17). _Racial inequities persist in health care despite expanded insurance._ The New York Times. Retrieved October 31, 2022, from https://www.nytimes.com/2021/08/17/health/racial-disparities-health-care.html
+- World Health Organization. (2022). _Health Inequality Monitor._ Retrieved October 31, 2022, from https://www.who.int/data/inequality-monitor/data. 
 
 ## Appendix A: Questions
 None
