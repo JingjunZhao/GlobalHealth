@@ -8,8 +8,8 @@
 
 
 read.csv("../data/Government Health expenditure per capital .csv")
-Government.Health.expenditure.per.capital.<-Government.Health.expenditure.per.capital.[-1,]
-per_capital<-group_by(Government.Health.expenditure.per.capital.,V5)%>%summarise(V10=V10,V24=V24,V5=V5,V8=V8)
+Government Health expenditure per capital <-Government Health expenditure per capital [-1,]
+per_capital<-group_by(Government Health expenditure per capital ,V5)%>%summarise(V10=V10,V24=V24,V5=V5,V8=V8)
 names(per_capital)[1]<-paste("continents")
 names(per_capital)[2]<-paste("year")
 names(per_capital)[3]<-paste("Health_spending_per_capital")
