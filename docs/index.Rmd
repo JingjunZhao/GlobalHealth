@@ -1,5 +1,5 @@
 ---
-#title: "Your Project Title"
+#title: "Understanding Global Healthcare Inequalities by Country Debt: Exploratory Analysis"
 #author: "Abigail Babila", "Emma Esteban", "Jingjun Zhao"
 date: "1/22/2022"
 output: html_document
@@ -38,6 +38,8 @@ source("../per capital.R")
 ### Example 2: Initialize a variable and then use it
 ```{r}
 # Example 1: This function was "sourced" above
+source("../source/data_access.R")
+data_access_test()
 msg <- data_access_test("Morgan!")
 ```
 
