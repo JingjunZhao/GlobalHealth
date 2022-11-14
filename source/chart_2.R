@@ -40,4 +40,6 @@ plot <- ggplot(data = debt_and_health_spending) +
        caption = "This is what the data shows.",
        x = "Net Creditor/Debtor",
        y = "Health Spending (% of Govt. Expenditure)")
-ggplotly(plot)
+chart_2 <- ggplotly(plot)
+print(chart_2)
+
