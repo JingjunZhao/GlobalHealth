@@ -7,7 +7,7 @@
 #nrow(per_capital_2019)
 
 
-read.csv("../data/o_per_capital.csv")
+read.csv("../data/o_per_capital .csv")
 o_per_capital <-o_per_capital [-1,]
 per_capital<-group_by(o_per_capital,V5)%>%summarise(V10=V10,V24=V24,V5=V5,V8=V8)
 names(per_capital)[1]<-paste("continents")
