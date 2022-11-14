@@ -22,7 +22,6 @@ knitr::opts_chunk$set(echo = TRUE)
 # directory(..), down into source (/source), and 
 # then "source" an R file (data_access.R)
 source("../per capital.R")
-View(world_map)
 ```
 
 
