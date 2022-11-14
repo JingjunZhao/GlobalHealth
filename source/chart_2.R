@@ -5,14 +5,8 @@ library("ggplot2")
 library("plotly")
 
 # Import Data
-debt_data <- read.csv("debt_data_portal.csv", stringsAsFactors = FALSE)
-health_spending_data <- read.csv("expenditure_as_a_share.csv", stringsAsFactors = FALSE)
-
-View(debt_data)
-View(health_spending_data)
-unique(debt_data$JDC.Risk..2021.)
-length(unique(health_spending_data$Entity))
-colnames(health_spending_data)
+debt_data <- read.csv("../data/debt_data_portal.csv", stringsAsFactors = FALSE)
+health_spending_data <- read.csv("../data/expenditure_as_a_share.csv", stringsAsFactors = FALSE)
 
 ## Editing debt data
 debt <- debt_data %>%

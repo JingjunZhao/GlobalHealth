@@ -6,7 +6,7 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 
@@ -18,8 +18,7 @@ library("tidyverse")
 library("ggplot2")
 library("plotly")
 require(plotly)
-source("../chart_2.R")
-chart_2_test()
+source("../source/chart_2.R")
 ```
 This chart is a scatter plot showing the relationship between a country's government debt and government health spending. Each point represents a country. On the x-axis is the net credit or debt of that country from 2020 and on the y-axis is the health spending as a percent of total government expenditure.
 
