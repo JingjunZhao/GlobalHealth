@@ -7,9 +7,9 @@
 #nrow(per_capital_2019)
 
 
-read.csv("../data/o_per_capital .csv")
+o_per_capital. <-read.csv("../data/o_per_capital .csv")
 o_per_capital. <-o_per_capital. [-1,]
-per_capital<-group_by(o_per_capital.,V5)%>%summarise(V10=V10,V24=V24,V5=V5,V8=V8)
+per_capital<-group_by(o_per_capital.,ParentLocation)%>%summarise(Period=Period,Value=Value,ParentLocation=ParentLocation,Location=Location)
 names(per_capital)[1]<-paste("continents")
 names(per_capital)[2]<-paste("year")
 names(per_capital)[3]<-paste("Health_spending_per_capital")
@@ -24,7 +24,7 @@ per_capital_map_2019<-ggplot(map_2019, aes(long, lat, group = group))+
   scale_fill_gradient(low = "yellow", high = "red", na.value = NA)
 print(per_capital_map_2019)
 
-read.csv("../data/expenditure_as_a_share.csv")
+expenditure_as_a_share<-read.csv("../data/expenditure_as_a_share.csv")
 head(expenditure_as_a_share)
 names(expenditure_as_a_share)[4]<-paste("Health_percentage")
 Share_2019<-filter(expenditure_as_a_share,Year==2019)
