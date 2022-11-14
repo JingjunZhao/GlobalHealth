@@ -6,16 +6,6 @@
 #  geom_bar(stat="identity", fill="steelblue")
 #nrow(per_capital_2019)
 
-library(dplyr)
-library(ggplot2)
-require(viridis)
-install.packages("maps")
-install.packages("viridis")
-library("maps")
-require(maps)
-theme_set(
-  theme_void()
-)
 
 read.csv("../data/Government Health expenditure per capital .csv")
 Government.Health.expenditure.per.capital.<-Government.Health.expenditure.per.capital.[-1,]

@@ -1,6 +1,6 @@
 ---
-title: "Your Project Title"
-author: "Abigail Babila", "Emma Esteban", "Jingjun Zhao"
+#title: "Your Project Title"
+#author: "Abigail Babila", "Emma Esteban", "Jingjun Zhao"
 date: "1/22/2022"
 output: html_document
 ---
@@ -24,12 +24,12 @@ knitr::opts_chunk$set(echo = TRUE)
 source("../per capital.R")
 View(world_map)
 ```
-read.csv("../data/Government Health expenditure per capital .csv")
+
 
 ### Example 2: Initialize a variable and then use it
 ```{r}
 # Example 1: This function was "sourced" above
-msg <- data_access_test(" Morgan!")
+msg <- data_access_test("Morgan!")
 ```
 
 > `r msg` Hope you have a good day!! 
