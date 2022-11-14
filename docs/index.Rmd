@@ -24,6 +24,7 @@ knitr::opts_chunk$set(echo = TRUE)
 source("../source/data_access.R")
 data_access_test()
 ```
+read.csv("../source/Government Health expenditure per capital .csv")
 
 ### Example 2: Initialize a variable and then use it
 ```{r}
