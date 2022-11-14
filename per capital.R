@@ -14,7 +14,7 @@ names(per_capital)[1]<-paste("continents")
 names(per_capital)[2]<-paste("year")
 names(per_capital)[3]<-paste("Health_spending_per_capital")
 names(per_capital)[4]<-paste("region")
-
+per_capital_2019<-filter(per_capital,year==2019)
 world_map <- map_data("world")
 map_2019<-left_join(per_capital_2019, world_map, by = "region")
 head(map_2019)
