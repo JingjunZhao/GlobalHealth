@@ -16,4 +16,5 @@
 ### Developer notes: 
 * You will use this repository for developing your Final Project 
 * You will customized and add to this basic directory structure over the course of your project - edit the above table has needed
-* When ready, delete these developer notes
+* When ready, delete these developer note
+
