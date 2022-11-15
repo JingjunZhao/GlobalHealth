@@ -19,10 +19,10 @@ world_map <- map_data("world")
 map_2019<-left_join(per_capital_2019, world_map, by = "region")
 head(map_2019)
 map_2019$Health_spending_per_capital<-as.numeric(map_2019$Health_spending_per_capital)
-per_capital_map_2019<-ggplot(map_2019, aes(long, lat, group = group))+
+per_capital_map_2019<-ggplot(map_2019,aes(long, lat, group = group))+
   geom_polygon(aes(fill = Health_spending_per_capital))+ 
   scale_fill_gradient(low = "yellow", high = "red", na.value = NA)
-print(per_capital_map_2019)
+print(per_capital_map_2019+ggtitle("Government Health Spending Per Capital"))
 
 expenditure_as_a_share<-read.csv("../data/expenditure_as_a_share.csv")
 head(expenditure_as_a_share)
@@ -34,4 +34,4 @@ map_share_2019$Health_percentage<-as.numeric(map_share_2019$Health_percentage)
 expenditure_as_a_share_map<-ggplot(map_share_2019, aes(long, lat, group = group))+
   geom_polygon(aes(fill = Health_percentage))+ 
   scale_fill_gradient(low = "yellow", high = "red", na.value = NA)
-print(expenditure_as_a_share_map)
+print(expenditure_as_a_share_map+ggtitle("Health Spending as a Share of Government Expenditure"))
