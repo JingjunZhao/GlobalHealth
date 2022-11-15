@@ -2,6 +2,8 @@
 
 debt_data <- read.csv("../data/debt_data_portal.csv", stringsAsFactors = FALSE)
 health_spending_data <- read.csv("../data/expenditure_as_a_share.csv", stringsAsFactors = FALSE)
+per_capital_data <- read.csv("../data/o_per_capital .csv", stringsAsFactors = FALSE)
+maternal_mortality_data <- read.csv("../data/API_SH.STA.MMRT_DS2_en_csv_v2_4693917.csv", stringsAsFactors = FALSE)
 
 ## Editing debt data
 debt <- debt_data %>%
@@ -24,8 +26,47 @@ health_spending <- health_spending_data %>%
   filter(health_perc_year == most_recent_year) %>%
   subset(select = -(most_recent_year))
 
+## Editing per capital data
+per_capital <- per_capital_data %>%
+  filter(Period == 2019) %>%
+  rename("per_cap_health_spend" = Value) %>%
+  subset(select = -(IndicatorCode)) %>%
+  subset(select = -(Indicator)) %>%
+  subset(select = -(ValueType)) %>%
+  subset(select = -(ParentLocationCode)) %>%
+  subset(select = -(ParentLocation)) %>%
+  subset(select = -(Location.type)) %>%
+  subset(select = -(SpatialDimValueCode)) %>%
+  subset(select = -(Period.type)) %>%
+  subset(select = -(Period)) %>%
+  subset(select = -(IsLatestYear)) %>%
+  subset(select = -(Dim1.type)) %>%
+  subset(select = -(Dim1)) %>%
+  subset(select = -(Dim1ValueCode)) %>%
+  subset(select = -(Dim2.type)) %>%
+  subset(select = -(Dim2)) %>%
+  subset(select = -(Dim2ValueCode)) %>%
+  subset(select = -(Dim3)) %>%
+  subset(select = -(Dim3ValueCode)) %>%
+  subset(select = -(Dim3.type)) %>%
+  subset(select = -(DataSourceDimValueCode)) %>%
+  subset(select = -(DataSource)) %>%
+  subset(select = -(FactValueNumericPrefix)) %>%
+  subset(select = -(FactValueNumeric)) %>%
+  subset(select = -(FactValueNumericLow)) %>%
+  subset(select = -(FactValueNumericHighPrefix)) %>%
+  subset(select = -(FactValueUoM)) %>%
+  subset(select = -(FactValueNumericLowPrefix)) %>%
+  subset(select = -(FactValueNumericHigh)) %>%
+  subset(select = -(FactValueTranslationID)) %>%
+  subset(select = -(FactComments)) %>%
+  subset(select = -(Language)) %>%
+  subset(select = -(DateModified))
+
+
 ## Join debt and health spending tables
-debt_and_health_spending <- health_spending %>%
-  left_join(debt, by = "Country")
+joined_data <- health_spending %>%
+  left_join(debt, by = "Country") %>%
+  left_join(per_capital, by = "Location")
 
 
