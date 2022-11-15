@@ -52,9 +52,9 @@ library("ggplot2")
 library("plotly")
 require(plotly)
 source("../source/chart_2.R")
-print(chart_2)
+ggplotly(plot)
 ```
-This chart is a scatter plot showing the relationship between a country's government debt and government health spending. Each point represents a country. On the x-axis is the net credit or debt of that country from 2020 and on the y-axis is the health spending as a percent of total government expenditure.
+This chart is a scatter plot showing the relationship between a country's government debt and government health spending. Each point represents a country. On the x-axis is the a numeric indicator for net creditor(+) or debtor(-) of that country from 2020. On the y-axis is the health spending as a percent of total government expenditure. This number is taken form the most-recent year of data collection, which most are from 2019 with a few from 2018. The color of each point tells you what the level of debt risk calculated by the Jubilee Debt Campaign. Hover over a point for more specific statistical information. The line shows a positive trend, with a dip where countries are neither a very far into debt or are large creditors.
 
 
 
