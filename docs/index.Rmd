@@ -23,7 +23,7 @@ This is a brief report regarding the influence of international debts over gover
 library("dplyr")
 library("tidyverse")
 source("../source/summary_table.R")
-print(joined_data)
+print(Summary_data)
 ```
 
 ## Chart 1: Maps
