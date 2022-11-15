@@ -63,10 +63,20 @@ per_capital <- per_capital_data %>%
   subset(select = -(Language)) %>%
   subset(select = -(DateModified))
 
+o_per_capital. <-read.csv("../data/o_per_capital .csv")
+o_per_capital. <-o_per_capital. [-1,]
+per_capital<-group_by(o_per_capital.,ParentLocation)%>%summarise(Period=Period,Value=Value,ParentLocation=ParentLocation,Location=Location)
+names(per_capital)[1]<-paste("continents")
+names(per_capital)[2]<-paste("year")
+names(per_capital)[3]<-paste("Health_spending_per_capital")
+names(per_capital)[4]<-paste("Country")
+per_capital_2019<-filter(per_capital,year==2019) %>%
+  subset(select = -(continents)) %>%
+  subset(select = -(year))
 
 ## Join debt and health spending tables
 joined_data <- health_spending %>%
   left_join(debt, by = "Country") %>%
-  left_join(per_capital, by = "Location")
+  left_join(per_capital_2019, by = "Country")
 
 
