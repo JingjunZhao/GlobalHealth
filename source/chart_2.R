@@ -34,12 +34,15 @@ plot <- ggplot(data = debt_and_health_spending) +
                            y = health_perc_expenditure,
                            color = JDC_risk_2021)) +
   geom_smooth(mapping = aes(x = net_creditor_debtor_2020,
-                            y = health_perc_expenditure)) +
-  labs(Title = "Net Debt vs. Health Spending",
+                            y = health_perc_expenditure),
+              method = loess,
+              formula = y ~ x) +
+  labs(title = "Net Debt vs. Health Spending",
        subtitle = "Subtitle",
        caption = "This is what the data shows.",
        x = "Net Creditor/Debtor",
-       y = "Health Spending (% of Govt. Expenditure)")
+       y = "Health Spending (% of Govt. Expenditure)",
+       color = "JDC Risk (2021)")
 chart_2 <- ggplotly(plot)
 print(chart_2)
 

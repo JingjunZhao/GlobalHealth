@@ -1,5 +1,5 @@
 ---
-#title: "Understanding Global Healthcare Inequalities by Country Debt: Exploratory Analysis"
+#title: "Exploratory Analysis"
 #author: "Abigail Babila", "Emma Esteban", "Jingjun Zhao"
 date: "1/22/2022"
 output: html_document
@@ -8,16 +8,17 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+# Exploratory Analysis: Understanding Global Healthcare Inequalities by Country Debt
 
 # Overview
 This is a brief report regarding the influence of international debts over government' health spending and how is that negatively influence local citizens' health. This page compares the health spending and health situation between countries all over the world and shows the correlation between debt and health spending per capital.
 
 # Summary Table
-```{r}
+```{r message=FALSE,warning=FALSE}
 library("dplyr")
 library("tidyverse")
-source("../source/summary_table")
-table <- print(debt_and_health_spending)
+source("../source/summary_table.R")
+print(debt_and_health_spending)
 ```
 `table`
 
@@ -50,6 +51,7 @@ library("ggplot2")
 library("plotly")
 require(plotly)
 source("../source/chart_2.R")
+print(chart_2)
 ```
 This chart is a scatter plot showing the relationship between a country's government debt and government health spending. Each point represents a country. On the x-axis is the net credit or debt of that country from 2020 and on the y-axis is the health spending as a percent of total government expenditure.
 
