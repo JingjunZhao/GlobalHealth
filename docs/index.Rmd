@@ -12,11 +12,13 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Report Summary
 ```{r message=FALSE,warning=FALSE}
+library("knitr")
 library("dplyr")
 library("tidyverse")
 source("../source/summary_info.R")
+num_countries <- print(summary_info$num_countries)
 ```
-This is a brief report regarding the influence of international debts over government' health spending and how that negatively influences local citizen health. It looks at data for `summary_info$num_countries` countries. This page compares the health spending and health situation between countries all over the world, `summary_info$num_in_debt` of which are _in debt crisis_ according to the Jubilee Debt Campaign (JDC). While chart 1 maps global differences in health spending, chart 2 furthers our argument by showing the correlation between debt and health spending. Currently, the country that uses the greatest percent of government expenditure on health, `summary_info$greatest_country`, has a net creditor score of `summary_info$greatest_country_net`. Also, the data looks at maternal mortality rate as an indicator to show how countries in debt impact individual health. Currently, the country with the lowest net creditor/debtor score, `summary_info$most_in_debt`, has a maternal mortality rate of `summary_info$most_in_debt_mmr`. Our analysis aims to prove how financial actors in government play a role in citizen health and health care.
+This is a brief report regarding the influence of international debts over government' health spending and how that negatively influences local citizen health. It looks at data for `num_countries` countries. This page compares the health spending and health situation between countries all over the world, `summary_info$num_in_debt` of which are _in debt crisis_ according to the Jubilee Debt Campaign (JDC). While chart 1 maps global differences in health spending, chart 2 furthers our argument by showing the correlation between debt and health spending. Currently, the country that uses the greatest percent of government expenditure on health, `summary_info$greatest_country`, has a net creditor score of `summary_info$greatest_country_net`. Also, the data looks at maternal mortality rate as an indicator to show how countries in debt impact individual health. Currently, the country with the lowest net creditor/debtor score, `summary_info$most_in_debt`, has a maternal mortality rate of `summary_info$most_in_debt_mmr`. Our analysis aims to prove how financial actors in government play a role in citizen health and health care.
 
 ## Summary Table
 #In this table, we included all the important indicators that helps us prove the correlation between international debts and citizens' well beings, which is also a summary for all the essential indicators we used for the following chart. We want use this table to show the dimension including debts, government health spending, and health indicators that we include in this page, and also how many countries we are included in our research.
@@ -73,52 +75,5 @@ library("ggplot2")
 source("../source/MMR.R")
 
 ```
-This barplot depicts the maternal mortality rate of women across different countries around the world with different financial statuses. Based on this data, countries with lower incomes and less access to healthcare have a larger negative effect on women’s health which proses as a bigger risk.
+This barplot depicts the maternal mortality rate of women across different countries around the world with different financial statuses. Based on this data, countries with lower incomes and less access to healthcare have a larger negative effect on women’s health which poses as a bigger risk.
 
-
-
-
-
-## What is this file for?
-
-* This file will eventually become your project report for **P02: Exploratory Data Analysis**. Specifically, you will write rmarkdown to report your exploratory data analysis.
-
-* Please see Canvas for more details.
-
-## ACCESSING THE /source DIRECTORY
-### Example 1: Source some code and run a function
-```{r}
-# Example 1: Note relative path, which can be read: Up one
-# directory(..), down into source (/source), and 
-# then "source" an R file (data_access.R)
-source("../source/data_access.R")
-data_access_test()
-```
-
-### Example 2: Initialize a variable and then use it
-```{r}
-# Example 1: This function was "sourced" above
-msg <- data_access_test("Morgan!")
-```
-
-> `r msg` Hope you have a good day!! 
-
-## ABOUT THIS FILE: 
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
