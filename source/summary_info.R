@@ -3,7 +3,7 @@
 library("dplyr")
 library("tidyverse")
 source("../source/summary_table.R")
-
+summary_info<-list()
 summary_info <- list(num_countries = summary_info$num_countries, 
                      num_in_debt = summary_info$num_in_debt, 
                      greatest_country = summary_info$greatest_country, 
