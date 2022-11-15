@@ -19,8 +19,6 @@ names(mmr_data)[1]<-paste("Country")
 names(mmr_data)[2]<-paste("maternal_mortality")
 
 # Plot
-
-barplot(mmr_data$maternal_mortality)
 mmr_plot <- barplot(mmr_data$maternal_mortality, names.arg = mmr_data$Country,main = "Maternal Mortality Rate Across Countries in 2017", 
                     xlab="Country", ylab = "maternal_mortality")
 plot(mmr_plot)
