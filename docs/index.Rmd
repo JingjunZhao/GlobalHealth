@@ -45,6 +45,7 @@ To compare the each countries' govenment health spending per capital, this is a 
 
 ## Government Debt and Health Spending
 ```{r message=FALSE,warning=FALSE}
+install.packages("plotly", dependencies = TRUE)
 library("dplyr")
 library("tidyverse")
 library("ggplot2")
