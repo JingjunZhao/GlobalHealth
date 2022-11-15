@@ -24,6 +24,7 @@ print(debt_and_health_spending)
 ## Chart 1: Maps
 
 #### Government Heath Expenditure per capital and Health Spending as a Share of Total Government Expenditure
+##To compare the each countries' government health spending per capital, this is a global map showing the health spending in 2019. After that, we have a map showing the government health spending as share of the overall government expenditure
 ```{r message=FALSE,warning=FALSE}
 options(repos=structure(c(CRAN="YOUR FAVORITE MIRROR")))
 install.packages("dplyr", dependencies = TRUE)
@@ -37,7 +38,7 @@ library("maps")
 require(maps)
 source("../source/per capital.R")
 ```
-To compare the each countries' govenment health spending per capital, this is a global map showing the health spending in 2019.
+
 
 
 ## Chart 2: Scatter Plot

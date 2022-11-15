@@ -74,9 +74,16 @@ per_capital_2019<-filter(per_capital,year==2019) %>%
   subset(select = -(continents)) %>%
   subset(select = -(year))
 
+## editing maternal_mortality
+maternal_mortality<-group_by(maternal_mortality_data,Country.Name)%>%summarise(X2017=X2017,Country.Name=Country.Name)
+names(maternal_mortality)[1]<-paste("Country")
+names(maternal_mortality)[2]<-paste("maternal_mortality")
 ## Join debt and health spending tables
 joined_data <- health_spending %>%
   left_join(debt, by = "Country") %>%
   left_join(per_capital_2019, by = "Country")
 
+## Join health indicator
+Summary_data<-joined_data %>%
+  left_join(maternal_mortality,by="Country")
 
