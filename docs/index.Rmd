@@ -10,21 +10,20 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 # Exploratory Analysis: Understanding Global Healthcare Inequalities by Country Debt
 
-# Overview
+## Overview
 This is a brief report regarding the influence of international debts over government' health spending and how is that negatively influence local citizens' health. This page compares the health spending and health situation between countries all over the world and shows the correlation between debt and health spending per capital.
 
-# Summary Table
+## Summary Table
 ```{r message=FALSE,warning=FALSE}
 library("dplyr")
 library("tidyverse")
 source("../source/summary_table.R")
 print(debt_and_health_spending)
 ```
-`table`
 
-# Chart 1: Maps
+## Chart 1: Maps
 
-## Government Heath Expenditure per capital and Health Spending as a Share of Total Government Expenditure
+#### Government Heath Expenditure per capital and Health Spending as a Share of Total Government Expenditure
 ```{r message=FALSE,warning=FALSE}
 options(repos=structure(c(CRAN="YOUR FAVORITE MIRROR")))
 install.packages("dplyr", dependencies = TRUE)
@@ -36,14 +35,14 @@ install.packages("viridis", dependencies = TRUE)
 require("viridis")
 library("maps")
 require(maps)
-source("../per capital.R")
+source("../source/per capital.R")
 ```
 To compare the each countries' govenment health spending per capital, this is a global map showing the health spending in 2019.
 
 
-# Chart 2: Scatter Plot
+## Chart 2: Scatter Plot
 
-## Government Debt and Health Spending
+#### Government Debt and Health Spending
 ```{r message=FALSE,warning=FALSE}
 install.packages("plotly", dependencies = TRUE)
 library("dplyr")
