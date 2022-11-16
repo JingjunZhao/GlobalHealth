@@ -4,12 +4,6 @@ library("dplyr")
 library("tidyverse")
 source("../source/summary_table.R")
 summary_info <- list()
-summary_info <- list(num_countries = num_countries, 
-                     num_in_debt = num_in_debt, 
-                     greatest_country = greatest_country, 
-                     greatest_country_net = greatest_country_net,
-                     most_in_debt = most_in_debt,
-                     most_in_debt_mmr = most_in_debt_mmr)
 num_countries <- nrow(Summary_data)
 num_in_debt <- Summary_data %>%
   filter(JDC_risk_2021 == "In debt crisis") %>%
@@ -26,4 +20,9 @@ most_in_debt <- Summary_data %>%
 most_in_debt_mmr <-  Summary_data %>%
   filter(net_creditor_debtor_2020 == -421) %>%
   pull(maternal_mortality)
-
+summary_info <- list(num_countries = num_countries, 
+                     num_in_debt = num_in_debt, 
+                     greatest_country = greatest_country, 
+                     greatest_country_net = greatest_country_net,
+                     most_in_debt = most_in_debt,
+                     most_in_debt_mmr = most_in_debt_mmr)
