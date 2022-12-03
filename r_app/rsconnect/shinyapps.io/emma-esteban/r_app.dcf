@@ -1,0 +1,13 @@
+name: r_app
+title: r_app
+username:
+account: emma-esteban
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 7805088
+bundleId: 6587320
+url: https://emma-esteban.shinyapps.io/r_app/
+when: 1670103338.98533
+lastSyncTime: 1670103338.98534
+asMultiple: FALSE
+asStatic: FALSE
