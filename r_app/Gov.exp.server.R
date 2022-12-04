@@ -6,7 +6,7 @@
 #
 #    http://shiny.rstudio.com/
 #
-
+source("../source/per capital.R")
 library(shiny)
 
 server <- function(input, output) {
@@ -24,9 +24,9 @@ server <- function(input, output) {
             filter(Health_percentage >= input$range[1]) %>% 
             filter(Health_percentage <= input$range[2])
     })
-    output$map<-renderPlot({ggplot(filter_range(), aes(long, lat, group = group))+
+    output$map<-renderPlotly({ggplotly(ggplot(filter_range(), aes(long, lat, group = group))+
             geom_polygon(aes(fill = Health_percentage))+ 
-            scale_fill_gradient(low = "yellow", high = "red", na.value = NA)
+            scale_fill_gradient(low = "yellow", high = "red", na.value = NA))
         
     })
 }

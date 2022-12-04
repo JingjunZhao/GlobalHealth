@@ -5,6 +5,7 @@ library(htmltools)
 
 ### Sourcing ###
 source("../source/chart_2.R")
+source("../source/per capital.R")
 
 ### Variables ###
 x <- debt_and_health_spending$JDC_risk_2021 %>%
@@ -88,10 +89,10 @@ intro_page <- tabPanel(
 
 page_one <- tabPanel(
   "Graph 1",
-    sliderInput(inputId = "range","Health_Spending_percentage", 0, max(map_share_2019$Health_percentage, na.rm = TRUE), value = range(map_share_2019$Health_percentage)),
     titlePanel("Health Spending as a Share of Government Expenditure"),
+    sliderInput(inputId = "range","Health_Spending_percentage", 0, max(map_share_2019$Health_percentage, na.rm = TRUE), value = range(map_share_2019$Health_percentage)),
     mainPanel(
-      plotOutput(outputId = 'map'),
+      plotlyOutput(outputId = 'map'),
       p("This is Chart shows in 2019 each country have what share of their government spending was spent on health. Using the slide feature, this chart can directly show the inequality of health-related spending all over the world and filter out countries with low health expenditures to testify the austerity and link to the following debt and health well-being chart."
         )
       )
