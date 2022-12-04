@@ -1,6 +1,15 @@
 library(shiny)
 library(rsconnect)
 
+### Sourcing ###
+source("../source/chart_2.R")
+
+
+### Variables ###
+risk_choices <- debt_and_health_spending$JDC_risk_2021 %>%
+  unique()
+
+### Tabs ###
 intro_page <- tabPanel(
   "Introduction",
   titlePanel("Our Prject"),
@@ -15,7 +24,21 @@ page_one <- tabPanel(
 
 page_two <- tabPanel(
   "Graph 2",
-  titlePanel("Government Debt")
+  titlePanel("Government Debt"),
+  sidebarLayout(
+    sidebarPanel(
+      selectInput(
+        inputId = "risk",
+        label = "JDC Risk (2021)",
+        choices = risk_choices
+      )
+    ),
+    mainPanel(
+      plotlyOutput(
+        outputId = "chart_two"
+      )
+    )
+  )
 )
 
 page_three <- tabPanel(
@@ -30,6 +53,8 @@ conclusion_pg <- tabPanel(
   p("Words about project here")
 )
 
+
+### ui page ###
 ui <- navbarPage(
   "Global Health Spending",
   intro_page,
