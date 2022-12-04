@@ -1,6 +1,3 @@
-
-source("../source/chart_2.R")
-
 server <-  function(input, output) {
   output$chart_two <- renderPlotly({
     shiny_chart_two_data <- debt_and_health_spending %>%
@@ -9,10 +6,8 @@ server <-  function(input, output) {
       geom_point(mapping = aes(x = net_creditor_debtor_2020,
                                y = health_perc_expenditure,
                                color = JDC_risk_2021)) +
-      geom_smooth(mapping = aes(x = net_creditor_debtor_2020,
-                                y = health_perc_expenditure),
-                  method = loess,
-                  formula = y ~ x) +
+      xlim(-425, 505) +
+      ylim(-5, 25) +
       labs(title = "Net Debt vs. Health Spending",
            subtitle = "Subtitle",
            caption = "This is what the data shows.",

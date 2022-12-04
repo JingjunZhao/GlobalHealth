@@ -4,10 +4,10 @@ library(rsconnect)
 ### Sourcing ###
 source("../source/chart_2.R")
 
-
 ### Variables ###
-risk_choices <- debt_and_health_spending$JDC_risk_2021 %>%
+x <- debt_and_health_spending$JDC_risk_2021 %>%
   unique()
+risk_choices <- x[-c(2)]
 
 ### Tabs ###
 intro_page <- tabPanel(
