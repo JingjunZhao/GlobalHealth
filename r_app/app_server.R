@@ -1,3 +1,5 @@
+source("../source/chart_2.R")
+
 server <-  function(input, output) {
   output$chart_two <- renderPlotly({
     shiny_chart_two_data <- debt_and_health_spending %>%
