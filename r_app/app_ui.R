@@ -19,8 +19,12 @@ intro_page <- tabPanel(
 
 page_one <- tabPanel(
   "Graph 1",
-  titlePanel("Health Spending")
-)
+    sliderInput(inputId = "range","Health_Spending_percentage", 0, max(map_share_2019$Health_percentage, na.rm = TRUE), value = range(map_share_2019$Health_percentage)),
+    titlePanel("Health Spending as a Share of Government Expenditure"),
+    mainPanel(
+      plotOutput(outputId = 'map'))
+  )
+
 
 page_two <- tabPanel(
   "Graph 2",
