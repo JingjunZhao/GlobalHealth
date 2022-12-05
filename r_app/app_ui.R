@@ -3,8 +3,9 @@ library(rsconnect)
 library(htmltools)
 
 ### Sourcing ###
-source("../source/chart_2.R")
-source("../source/MMR.R")
+source("https://raw.githubusercontent.com/info201a-au2022/project-group-1-section-af/main/source/chart_2.R")
+source("https://raw.githubusercontent.com/info201a-au2022/project-group-1-section-af/main/source/MMR.R")
+source("https://raw.githubusercontent.com/info201a-au2022/project-group-1-section-af/main/source/per%20capital.R")
 
 ### Variables ###
 x <- debt_and_health_spending$JDC_risk_2021 %>%

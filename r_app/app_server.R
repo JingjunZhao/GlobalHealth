@@ -1,7 +1,7 @@
 library(shiny)
-source("../source/per capital.R")
-source("../source/chart_2.R")
-source("../source/MMR.R")
+source("https://raw.githubusercontent.com/info201a-au2022/project-group-1-section-af/main/source/per%20capital.R")
+source("https://raw.githubusercontent.com/info201a-au2022/project-group-1-section-af/main/source/chart_2.R")
+source("https://raw.githubusercontent.com/info201a-au2022/project-group-1-section-af/main/source/MMR.R")
 
 server <- function(input, output) {
 
