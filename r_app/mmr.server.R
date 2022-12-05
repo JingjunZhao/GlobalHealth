@@ -8,29 +8,36 @@
 #
 
 library(shiny)
+source("/Users/abigailbabila/documents/info201/project-group-1-section-af/source/MMR.R")
+
+server <- function(input, output) {
+  output$MMR.R <- plot-Ouput({
+    
+  })
+}
 
 # Define UI for application that draws a histogram
-ui <- fluidPage(
+# ui <- fluidPage(
 
     # Application title
-    titlePanel("Old Faithful Geyser Data"),
+#    titlePanel("Old Faithful Geyser Data"),
 
     # Sidebar with a slider input for number of bins 
-    sidebarLayout(
-        sidebarPanel(
-            sliderInput("bins",
-                        "Number of bins:",
-                        min = 1,
-                        max = 50,
-                        value = 30)
-        ),
+#    sidebarLayout(
+ #       sidebarPanel(
+  #          sliderInput("bins",
+   #                     "Number of bins:",
+    #                    min = 1,
+     #                   max = 50,
+      #                  value = 30)
+      #  ),
 
         # Show a plot of the generated distribution
-        mainPanel(
-           plotOutput("distPlot")
-        )
-    )
-)
+       # mainPanel(
+        #   plotOutput("distPlot")
+#        )
+#    )
+#)
 
 # Define server logic required to draw a histogram
 server <- function(input, output) {
