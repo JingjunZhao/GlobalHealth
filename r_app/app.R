@@ -18,6 +18,7 @@ library(shiny)
 library(rsconnect)
 library(htmltools)
 library("purrr")
+library(shinyWidgets)
 source("../r_app/app_ui.R")
 source("../r_app/app_server.R")
 
