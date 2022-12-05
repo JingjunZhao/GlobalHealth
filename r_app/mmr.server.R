@@ -11,7 +11,7 @@ library(shiny)
 source("../source/MMR.R")
 
 server <- function(input, output) {
-  outputPlotly$mmr_plot <- renderPlotly({
+  output$mmr_plot <- renderPlotly({
     barplot(mmr_data[,input$country], 
             main=input$country,
             ylab="Maternal Mortality Rate",

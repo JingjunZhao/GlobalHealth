@@ -118,7 +118,7 @@ page_three <- tabPanel(
     helpText("Data collected from WHO, UNICEF, UNFPA, World Bank Group, and the United Nations Population Division")
   ),
   mainPanel(
-    plotOutput(outputId = ("plot_mmr")),
+    plotlyOutput(outputId = ("plot_mmr")),
     p("This bar plot depicts the maternal mortality ratio of various countries in 2017. With the drop down feature, users can compare any combination of countries to view the difference in mortality rate based on the government funding available to treat these mothers during their pregnancy. This chart includes countries from various levels of economic stability making it clear to see the inequality in healthcare accessibility people face when it comes to the economic status of their country.")
   )
 )
@@ -126,7 +126,7 @@ page_three <- tabPanel(
 conclusion_pg <- tabPanel(
   "Conclusion",
   titlePanel("Final Analysis"),
-  h2("Summary Takeaways"),
+  h3("Summary Takeaways"),
   p("In conclusion, from this project, we can certainly testify to our initial hypothesis that there is an important correlation between the international debts and health inequality, that the more a country owed, the more likely the country had poor medical conditions. As a first takeaway, using maternal mortality ratio as a health indicator, the health inequalities situation is serious all over the world, and the poor data in African countries specifically contributed to this situation. Secondly, the inequality and limited conditions in these southern countries can be tied back to their governments’ restricted spending and austerity policy. Based on the map chart, the exact countries with high maternal mortality ratio have low percentage of health spending as a share of government expenditure, meaning these countries’ governments provide limited medical resources and workforce. Therefore, the restrcited government health expenditure is a main reason that led to the inequality. Finally, we can prove that debt is the main reason leading to the austerity policy and directly cut down the health -related expenditure. The countries with more payments during are likely to have a low percentage of expenditure spent on health. Thus, we can conclude that international debts are a significant factor in causing health inequality, and if we want to eliminate this gap, debts are a crucial problem that we need to recognize and resolve.")
 )
 

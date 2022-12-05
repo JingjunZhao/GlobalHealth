@@ -1,6 +1,32 @@
+library(shiny)
+source("../source/per capital.R")
 source("../source/chart_2.R")
+source("../source/MMR.R")
 
-server <-  function(input, output) {
+server <- function(input, output) {
+
+### Chart 1 ####
+  observeEvent(map_share_2019, {
+    updateSliderInput(
+      inputId = "range",
+      min = min(map_share_2019$Health_percentage),
+      max = max(map_share_2019$Health_percentage),
+      value = range(map_share_2019$Health_percentage, na.rm = FALSE)
+    )
+  })
+  
+  filter_range <- reactive({
+    map_share_2019 %>%
+      filter(Health_percentage >= input$range[1]) %>% 
+      filter(Health_percentage <= input$range[2])
+  })
+  output$map<-renderPlotly({ggplotly(ggplot(filter_range(), aes(long, lat, group = group))+
+                                       geom_polygon(aes(fill = Health_percentage))+ 
+                                       scale_fill_gradient(low = "yellow", high = "red", na.value = NA))
+    
+  })
+  
+### Chart 2 ####
   output$chart_two <- renderPlotly({
     shiny_chart_two_data <- debt_and_health_spending %>%
       filter(JDC_risk_2021 == input$risk)
@@ -19,5 +45,12 @@ server <-  function(input, output) {
     chart_2 <- ggplotly(plot)
     chart_2
   })
-}
 
+### Chart 3 ###
+  output$mmr_plot <- renderPlotly({
+    barplot(mmr_data[,input$country], 
+            main=input$country,
+            ylab="Maternal Mortality Rate",
+            xlab="Country")
+  })
+}
