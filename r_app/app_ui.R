@@ -70,7 +70,7 @@ page_four <- tabPanel(
   mainpanel(
     plotOutput(
       outputId = ("plot_mmr"))
-)
+))
 
 
 
