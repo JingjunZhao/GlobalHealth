@@ -5,9 +5,9 @@ account: jingjun
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 7814904
-bundleId: 6593244
+bundleId: 6594166
 url: https://jingjun.shinyapps.io/project-app/
-when: 1670242158.79481
-lastSyncTime: 1670242158.79483
+when: 1670255060.25022
+lastSyncTime: 1670255060.25024
 asMultiple: FALSE
 asStatic: FALSE
