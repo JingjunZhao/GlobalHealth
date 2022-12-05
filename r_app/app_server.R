@@ -54,3 +54,4 @@ server <- function(input, output) {
             xlab="Country"))
   })
 }
+

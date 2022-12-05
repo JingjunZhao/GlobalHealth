@@ -1,6 +1,6 @@
 ## maternal mortality ratio
 
-maternal_mortality_data <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-1-section-af/main/data/API_SH.STA.MMRT_DS2_en_csv_v2_4693917.csv")
+maternal_mortality_data <- read.csv("../data/API_SH.STA.MMRT_DS2_en_csv_v2_4693917.csv")
 
 library(ggplot2)
 library(dplyr)
