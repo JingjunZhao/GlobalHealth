@@ -125,7 +125,7 @@ page_three <- tabPanel(
     hr(),
     helpText("Data collected from WHO, UNICEF, UNFPA, World Bank Group, and the United Nations Population Division")
   ),
-  mainpanel(
+  mainPanel(
     plotOutput(
       outputId = ("plot_mmr"))
 ))
