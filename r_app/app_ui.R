@@ -67,7 +67,7 @@ intro_page <- tabPanel(
     strong("4) "), "What is the standard level of health resource for a country to equip?"),
   h2("Data"),
   p("Our project uses three datasets. The", strong("first"), " data set is from OECD, Organisation for Economic Co-operation and Development, and Nextjournal combined three sets of data form OECD together to calculate the ", a("health spending", href= "https://nextjournal.com/fiona-spooner/government-health-expenditure"), "as a share of total government expenditure. We think this combination finished by Nextjournal, an organization working on improving data-driven research, is more straightforward compared to the raw data to deliver our purposes of the project. 
-  The", strong("second"), " data set is from Debt Justice, an organization based in the UK that provides the public with easy-access data about debt crises around the world. Debt Justice and Citizens for Financial Justice created the ", a("Debt Data Portal",  href = "https://data.debtjustice.org.uk/"), ", which compiles key statistics on the debts of different countries and governments globally. The ", strong("Debt Data Portal"), "is where we got our debt data for the second chart in this project, and for each country, it provides the JDC (Jubilee Debt Campaign) Risk Index, IMF Risk Index, government external debt payments, net creditor/debtor score, private external debt, and current account balance.
+  The", strong("second"), " data set is from Debt Justice, an organization based in the UK that provides the public with easy-access data about debt crises around the world. Debt Justice and Citizens for Financial Justice created the ", a("Debt Data Portal",  href = "https://data.debtjustice.org.uk/"), ", which compiles key statistics on the debts of different countries and governments globally. The Debt Data Portal is where we got our debt data for the second chart in this project, and for each country, it provides the JDC (Jubilee Debt Campaign) Risk Index, IMF Risk Index, government external debt payments, net creditor/debtor score, private external debt, and current account balance.
   The ", strong("third"), " data set is from the World Bank Group associated with WHO, UNICEF, UNFPA, and the United Nations Population Division. This data set depicts the ", a("Maternal Mortality Ratio", href = "https://data.worldbank.org/indicator/SH.STA.MMRT?end=2017&start=2000&view=map"), "of countries across the world from 2000-2017. However, we filtered out the data to focus on 2017. "),
   h2("Key Findings & Discussion"),
   p("words"))
@@ -118,11 +118,10 @@ page_three <- tabPanel(
     helpText("Data collected from WHO, UNICEF, UNFPA, World Bank Group, and the United Nations Population Division")
   ),
   mainPanel(
-    plotOutput(
-      outputId = ("plot_mmr"),
-      p("This bar plot depicts the maternal mortality ratio of various countries in 2017. With the drop down feature, users can compare any combination of countries to view the difference in mortality rate based on the government funding available to treat these mothers during their pregnancy. This chart includes countries from various levels of economic stability making it clear to see the inequality in healthcare accessibility people face when it comes to the economic status of their country."))
-))
-
+    plotOutput(outputId = ("plot_mmr")),
+    p("This bar plot depicts the maternal mortality ratio of various countries in 2017. With the drop down feature, users can compare any combination of countries to view the difference in mortality rate based on the government funding available to treat these mothers during their pregnancy. This chart includes countries from various levels of economic stability making it clear to see the inequality in healthcare accessibility people face when it comes to the economic status of their country.")
+  )
+)
 
 conclusion_pg <- tabPanel(
   "Conclusion",
