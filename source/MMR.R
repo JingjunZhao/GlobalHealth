@@ -17,6 +17,7 @@ names(mmr_data)[1]<-paste("Country")
 names(mmr_data)[2]<-paste("maternal_mortality")
 
 View(mmr_data)
+
 # plot
 mmr_plot <- barplot(mmr_data$maternal_mortality, names.arg = mmr_data$Country,main = "Maternal Mortality Rate Across Countries in 2017", 
                     xlab="Country", ylab = "maternal_mortality")
@@ -33,7 +34,7 @@ mortality_data <- mmr_data %>%
 plot_mmr <- function () {
   summary <- ggplot(mortality_data, aes(y = maternal_mortality, x=Country)) + 
     ggtitle("Maternal Morality Rate Across Countries in 2017") +
-    geom_bar(stat="identity", color="turquoise")
+    geom_bar(position = "dodge", stat="identity", color="purple")
   return(summary)
 }
 
