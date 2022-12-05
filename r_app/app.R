@@ -9,6 +9,7 @@
 
 library(shiny)
 library(rsconnect)
+library(htmltools)
 source("../r_app/app_ui.R")
 source("../r_app/app_server.R")
 source("../r_app/Gov.exp.server.R")
