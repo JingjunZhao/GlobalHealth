@@ -127,7 +127,10 @@ conclusion_pg <- tabPanel(
   "Conclusion",
   titlePanel("Final Analysis"),
   h3("Summary Takeaways"),
-  p("In conclusion, from this project, we can certainly testify to our initial hypothesis that there is an important correlation between the international debts and health inequality, that the more a country owed, the more likely the country had poor medical conditions. As a first takeaway, using maternal mortality ratio as a health indicator, the health inequalities situation is serious all over the world, and the poor data in African countries specifically contributed to this situation. Secondly, the inequality and limited conditions in these southern countries can be tied back to their governments’ restricted spending and austerity policy. Based on the map chart, the exact countries with high maternal mortality ratio have low percentage of health spending as a share of government expenditure, meaning these countries’ governments provide limited medical resources and workforce. Therefore, the restrcited government health expenditure is a main reason that led to the inequality. Finally, we can prove that debt is the main reason leading to the austerity policy and directly cut down the health -related expenditure. The countries with more payments during are likely to have a low percentage of expenditure spent on health. Thus, we can conclude that international debts are a significant factor in causing health inequality, and if we want to eliminate this gap, debts are a crucial problem that we need to recognize and resolve.")
+  p("In conclusion, from this project, we can certainly testify to our initial hypothesis that there is an important correlation between the international debts and health inequality, that the more a country owed, the more likely the country had poor medical conditions."),
+  h2("First Takeaway"),
+  p("Using maternal mortality ratio as a health indicator, the health inequalities situation is serious all over the world, and the poor data in African countries specifically contributed to this situation."),
+ 
 )
 
 
