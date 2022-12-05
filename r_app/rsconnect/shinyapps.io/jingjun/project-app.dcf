@@ -5,9 +5,10 @@ account: jingjun
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 7814904
-bundleId: 6594560
+bundleId: 6594816
 url: https://jingjun.shinyapps.io/project-app/
-when: 1670259616.18658
-lastSyncTime: 1670259616.18659
+when: 1670262237.52059
+lastSyncTime: 1670262237.52061
 asMultiple: FALSE
 asStatic: FALSE
+ignoredFiles: app_server.R|app_ui.R|Gov.exp.server.R|mmr.server.R

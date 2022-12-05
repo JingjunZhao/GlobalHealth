@@ -7,17 +7,10 @@
 #    http://shiny.rstudio.com/
 #
 
-library("knitr")
-library("dplyr")
-library("tidyverse")
-library("plotly")
-library("hrbrthemes")
-library("ggplot2")
 library(shiny)
 library(rsconnect)
 library(htmltools)
-library(shinyWidgets)
-library("maps")
+
 source("https://raw.githubusercontent.com/info201a-au2022/project-group-1-section-af/main/r_app/app_ui.R")
 source("https://raw.githubusercontent.com/info201a-au2022/project-group-1-section-af/main/r_app/app_server.R")
 
