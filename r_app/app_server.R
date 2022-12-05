@@ -48,9 +48,9 @@ server <- function(input, output) {
 
 ### Chart 3 ###
   output$mmr_plot <- renderPlotly({
-    barplot(mmr_data[,input$country], 
+    ggplotly(barplot(mmr_data[,input$country], 
             main=input$country,
             ylab="Maternal Mortality Rate",
-            xlab="Country")
+            xlab="Country"))
   })
 }
