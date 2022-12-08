@@ -47,7 +47,7 @@ server <- function(input, output) {
   })
 
 ### Chart 3 ###
-  output$mmr_plot <- renderPlotly({
+  output$plot_mmr <- renderPlotly({
     mmr_chart_data <- mmr_data %>%
       filter(maternal_mortality == input$country)
     plot <- ggplot(data = mmr_three_data) +
@@ -61,6 +61,4 @@ server <- function(input, output) {
     chart_three <- ggplotly(plot)
     chart_three
   })
-    
-      
-
+}
