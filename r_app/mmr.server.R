@@ -12,12 +12,18 @@ source("../source/MMR.R")
 
 server <- function(input, output) {
   output$mmr_plot <- renderPlotly({
-    barplot(mmr_data[,input$country], 
-            main=input$country,
-            ylab="Maternal Mortality Rate",
-            xlab="Country")
+    mmr_chart_data <- mmr_data %>%
+      filter(maternal_mortality == input$country)
+    plot <- ggplot(data = chart_three_data) +
+      geom_bar(color = "gray",
+               x = Country,
+               y = maternal_mortality) +
+      labs(title = "Maternal Mortality Ratio 2017",
+           x = "Country",
+           y = "Maternal Mortality Ratio",
+           color = "gray")
+    chart_three <- ggplotly(plot)
+    chart_three
   })
-}
-
 
 
