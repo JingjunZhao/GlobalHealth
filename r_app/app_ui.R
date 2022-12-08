@@ -19,7 +19,7 @@ intro_page <- tabPanel(
   titlePanel("Understanding Global Healthcare Inequalities by Country Debt"),
   p("Authors: ", a("Abigail Babila", href = "ababila@uw.edu"), ", ", 
     a("Emma Esteban", href = "esteb@uw.edu"), ", ",
-    a("Jinjun Zhao", href = " jzhao2@uw.edu")
+    a("Jingjun Zhao", href = " jzhao2@uw.edu")
     ),
   p("Access and availability of health and medical care varies around the world. Many “Global South” countries have been found to have a smaller health workforce and medical resources. Our research seeks to better understand the causes of this inequality gap in healthcare between different countries. In this report we explore what we found as an important, but often overlooked, limiting factor to health care, which is government debt."),
   p("To understand our ", strong("problem domain"), " we decided to look at three major themes to guide our research. The first was health indicators, which would help us define health inequality and what it looks like in each of the countries across the globe. The second was government debt. Particularly in “Global South” countries. The third was austerity and how paying back debts influences the healthcare system. In this project we observe the relationship of debt and funds allocated to health spending in government. The stakeholders in this project are global health organizations, health advocacy groups, researchers and government officials across the globe interested in improving health systems. Our stakeholders also include basically all citizens that would benefit from improved healthcare, especially in countries facing economic crisis and those in the global south. Indirectly, while everyone in the world is involved, as health care access is a universal human right, the benefit of our research would also impact health care workers, providers, and medical researchers. This project centers around the human values of equality and integrity. The benefit of this project is spreading awareness about the gravity of the issue and supporting organizations who focus on debt relief and donating health equipment. However, the potential harm in this project is overgeneralization and possible overlooking of more specific root causes of health inequality at a more sub-national/regional level."),
@@ -30,6 +30,7 @@ intro_page <- tabPanel(
     strong("4) "), "What is the standard level of health resource for a country to equip?"),
   p("Our ", strong("data"), " comes from the Organisation for Economic Co-operation and Development (OCED), Debt Justice (based in the UK) and the Jubilee Debt Campaign, and the World Bank Group in association with WHO, UNICEF, UNFPA, and the United Nations Population Division."),
   p("Overall, these datasets were used to create our visualizations and ultimately answered our research questions. We could see which countries were in debt, and from there, we were able to look at the exact percentages of government expenditure that went into health care in a year. In many of the countries that had lower health spending per capita, rates of maternal mortality were higher, which is an indicator of health inequality. These were part of our ", strong("key findings"), ", which made connections between health spending, government debt and expenditures, and citizen health according to access to health care."),
+  img(src = "https://rocketreceivables.com/wp-content/uploads/medical-bills.jpg", width = "40%", height = "40%", align = "center", alt = "Graphic of person holding money symbol representing debt and doctor holding health symbol.")
 )
 
 page_one <- tabPanel(
@@ -103,7 +104,7 @@ report_pg <- tabPanel(
   p(strong("Project Title: "), "Understanding Global Healthcare Inequalities by Country Debt"),
   p(strong("Authors: "), a("Abigail Babila", href = "ababila@uw.edu"), ", ", 
     a("Emma Esteban", href = "esteb@uw.edu"), ", ",
-    a("Jinjun Zhao", href = " jzhao2@uw.edu")
+    a("Jingjun Zhao", href = " jzhao2@uw.edu")
   ),
   p(strong("Affiliation: "), "INFO-201: Technical Foundations of Informatics - The Information School - University of Washington"),
   p(strong("Date: "), "Autumn 2022"),

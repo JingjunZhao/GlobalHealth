@@ -5,9 +5,9 @@ account: emma-esteban
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 7805088
-bundleId: 6600204
+bundleId: 6609415
 url: https://emma-esteban.shinyapps.io/r_app/
-when: 1670349638.23952
-lastSyncTime: 1670349638.23955
+when: 1670487933.47193
+lastSyncTime: 1670487933.47194
 asMultiple: FALSE
 asStatic: FALSE
