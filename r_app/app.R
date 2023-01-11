@@ -11,8 +11,8 @@ library(shiny)
 library(rsconnect)
 library(htmltools)
 
-source("https://raw.githubusercontent.com/info201a-au2022/project-group-1-section-af/main/r_app/app_ui.R")
-source("https://raw.githubusercontent.com/info201a-au2022/project-group-1-section-af/main/r_app/app_server.R")
+source("https://raw.githubusercontent.com/JingjunZhao/GlobalHealth/main/r_app/app_server.R")
+source("https://raw.githubusercontent.com/JingjunZhao/GlobalHealth/main/r_app/app_ui.R")
 
 # source("../r_app/Gov.exp.server.R")
 # source("../source/MMR.R")
