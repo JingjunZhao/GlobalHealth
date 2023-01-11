@@ -10,6 +10,7 @@
 library(shiny)
 library(rsconnect)
 library(htmltools)
+library(tidyverse)
 
 source("https://raw.githubusercontent.com/JingjunZhao/GlobalHealth/main/r_app/app_server.R")
 source("https://raw.githubusercontent.com/JingjunZhao/GlobalHealth/main/r_app/app_ui.R")

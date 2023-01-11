@@ -86,9 +86,7 @@ report_pg <- tabPanel(
   h2("Basic Information"),
   p(strong("Code Name: "), "JAE-3"),
   p(strong("Project Title: "), "Understanding Global Healthcare Inequalities by Country Debt"),
-  p(strong("Authors: "), a("Abigail Babila", href = "ababila@uw.edu"), ", ", 
-    a("Emma Esteban", href = "esteb@uw.edu"), ", ",
-    a("Jingjun Zhao", href = " jzhao2@uw.edu")
+  p(strong("Authors: "), a("Jingjun Zhao", href = " jzhao2@uw.edu")
   ),
   p(strong("Affiliation: "), "INFO-201: Technical Foundations of Informatics - The Information School - University of Washington"),
   p(strong("Date: "), "Autumn 2022"),
