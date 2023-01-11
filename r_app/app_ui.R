@@ -17,9 +17,7 @@ risk_choices <- x[-c(2)]
 intro_page <- tabPanel(
   "Introduction",
   titlePanel("Understanding Global Healthcare Inequalities by Country Debt"),
-  p("Authors: ", a("Abigail Babila", href = "ababila@uw.edu"), ", ", 
-    a("Emma Esteban", href = "esteb@uw.edu"), ", ",
-    a("Jingjun Zhao", href = " jzhao2@uw.edu")
+  p("Authors: ", a("Jingjun Zhao", href = " jzhao2@uw.edu")
     ),
   p("Access and availability of health and medical care varies around the world. Many “Global South” countries have been found to have a smaller health workforce and medical resources. Our research seeks to better understand the causes of this inequality gap in healthcare between different countries. In this report we explore what we found as an important, but often overlooked, limiting factor to health care, which is government debt."),
   p("To understand our ", strong("problem domain"), " we decided to look at three major themes to guide our research. The first was health indicators, which would help us define health inequality and what it looks like in each of the countries across the globe. The second was government debt. Particularly in “Global South” countries. The third was austerity and how paying back debts influences the healthcare system. In this project we observe the relationship of debt and funds allocated to health spending in government. The stakeholders in this project are global health organizations, health advocacy groups, researchers and government officials across the globe interested in improving health systems. Our stakeholders also include basically all citizens that would benefit from improved healthcare, especially in countries facing economic crisis and those in the global south. Indirectly, while everyone in the world is involved, as health care access is a universal human right, the benefit of our research would also impact health care workers, providers, and medical researchers. This project centers around the human values of equality and integrity. The benefit of this project is spreading awareness about the gravity of the issue and supporting organizations who focus on debt relief and donating health equipment. However, the potential harm in this project is overgeneralization and possible overlooking of more specific root causes of health inequality at a more sub-national/regional level."),
@@ -69,20 +67,6 @@ page_two <- tabPanel(
   )
 )
 
-page_three <- tabPanel(
-  "Graph 3",
-  titlePanel("Maternal Mortality Rate in 2017"),
-  sidebarPanel(
-    selectInput("country", "Country:",
-                choices = colnames(mmr_data$Country)),
-    hr(),
-    helpText("Data collected from WHO, UNICEF, UNFPA, World Bank Group, and the United Nations Population Division")
-  ),
-  mainPanel(
-    plotlyOutput(outputId = ("plot_mmr")),
-    p("This bar plot depicts the maternal mortality ratio of various countries in 2017. With the drop down feature, users can compare any combination of countries to view the difference in mortality rate based on the government funding available to treat these mothers during their pregnancy. This chart includes countries from various levels of economic stability making it clear to see the inequality in healthcare accessibility people face when it comes to the economic status of their country.")
-  )
-)
 
 conclusion_pg <- tabPanel(
   "Conclusion",
@@ -185,7 +169,6 @@ ui <- navbarPage(
   intro_page,
   page_one,
   page_two,
-  page_three,
   conclusion_pg,
   report_pg
 )
