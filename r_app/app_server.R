@@ -45,6 +45,5 @@ server <- function(input, output) {
     chart_2 <- ggplotly(plot)
     chart_2
   })
-
-
+}
  
